@@ -16,7 +16,7 @@ jobs:
          docker build . -t matthewbusby/badwebapp
     - name: Smoke Test
       run: |
-         sudo docker run  -d -p 8080:8080 <dockerhubusername>/badwebapp
+         sudo docker run  -d -p 8080:8080 matthewbusby/badwebapp
          sleep 5
          curl localhost:8080
     - name: Set up QEMU
