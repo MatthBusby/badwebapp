@@ -33,7 +33,7 @@ jobs:
          docker build . -t matthewbusby/badwebapp
     - name: Shift Left Container Scan
       run: |
-        docker save <docker_hub_user>/badwebapp -o badwebapp.tar
+        docker save matthewbusby/badwebapp -o badwebapp.tar
         ./shiftleft image-scan -t 1800 -i ./badwebapp.tar
       continue-on-error: true         
     - name: Smoke Test
